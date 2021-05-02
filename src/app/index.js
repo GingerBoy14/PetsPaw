@@ -1,15 +1,15 @@
-import { Button } from 'antd'
-import { Container, Row, Col } from '@qonsoll/react-design'
+import { Switch, Redirect, Route } from 'react-router-dom'
+import routes from 'domains/allRoutes'
+import { ROUTE_PATHS } from 'app/constants'
 
 function App() {
   return (
-    <Container>
-      <Row>
-        <Col>
-          <Button type="primary">test</Button>
-        </Col>
-      </Row>
-    </Container>
+    <Switch>
+      {routes.map((route) => (
+        <Route {...route} />
+      ))}
+      <Redirect to={ROUTE_PATHS.LANDING} />
+    </Switch>
   )
 }
 
