@@ -1,6 +1,6 @@
 import { default as AppRoutes } from './App/constants/routes'
-// import BreedRoutes from './Breed/routes'
-// import GalleryRoutes from './Gallery/routes'
-// import VotingRoutes from './Voting/routes'
+import { default as BreedRoutes } from './Breed/constants/routes'
+import { default as GalleryRoutes } from './Gallery/constants/routes'
+import { default as VotingRoutes } from './Voting/constants/routes'
 
-export default [...AppRoutes]
+export default [...AppRoutes, ...BreedRoutes, ...GalleryRoutes, ...VotingRoutes]
