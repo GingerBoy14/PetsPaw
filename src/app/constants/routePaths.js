@@ -1,0 +1,6 @@
+export const LANDING = '/'
+export const BREEDS_ALL = '/breeds'
+export const BREEDS_SHOW = '/breeds/:id'
+export const FAVOURITES_ALL = '/favourites'
+export const LIKED_ALL = '/liked'
+export const DISLIKED_ALL = '/disliked'
