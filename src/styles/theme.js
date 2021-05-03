@@ -17,20 +17,11 @@ theme.grid.paddings = [
 //// COLORS
 theme.color = {}
 
-theme.color.background = '#E5E5E5'
+theme.color.background = '#F8F8F7'
 
 // Primary pure
 theme.color.primary = {}
 theme.color.primary.default = '#FF868E'
-// theme.color.primary.lighten1 = '#1d6fdc'
-// theme.color.primary.lighten2 = '#1d6fdc'
-// theme.color.primary.lighten3 = '#1d6fdc'
-// theme.color.primary.lighten4 = '#1d6fdc'
-// theme.color.primary.lighten5 = '#1d6fdc'
-// theme.color.primary.lighten6 = '#e3eefa'
-// theme.color.primary.lighten7 = '#1d6fdc'
-// theme.color.primary.lighten8 = '#1d6fdc'
-// theme.color.primary.lighten9 = '#1d6fdc'
 
 // Primary transparent
 theme.color.primary.t = {}
@@ -43,6 +34,54 @@ theme.color.primary.t.lighten6 = 'rgba(255, 134, 142,0.12)'
 theme.color.primary.t.lighten7 = 'rgba(255, 134, 142,0.10)'
 theme.color.primary.t.lighten8 = 'rgba(255, 134, 142,0.08)'
 theme.color.primary.t.lighten9 = 'rgba(255, 134, 142,0.04)'
+
+// Success default
+theme.color.success = {}
+theme.color.success.default = '#97EAB9'
+
+// Success transparent
+theme.color.success.t = {}
+theme.color.success.t.lighten1 = 'rgba(151, 234, 185,0.75)'
+theme.color.success.t.lighten2 = 'rgba(151, 234, 185,0.5)'
+theme.color.success.t.lighten3 = 'rgba(151, 234, 185,0.25)'
+theme.color.success.t.lighten4 = 'rgba(151, 234, 185,0.20)'
+theme.color.success.t.lighten5 = 'rgba(151, 234, 185,0.15)'
+theme.color.success.t.lighten6 = 'rgba(151, 234, 185,0.12)'
+theme.color.success.t.lighten7 = 'rgba(151, 234, 185,0.10)'
+theme.color.success.t.lighten8 = 'rgba(151, 234, 185,0.08)'
+theme.color.success.t.lighten9 = 'rgba(151, 234, 185,0.04)'
+
+// Warning default
+theme.color.warning = {}
+theme.color.warning.default = '#FFD280'
+
+// Warning transparent
+theme.color.warning.t = {}
+theme.color.warning.t.lighten1 = 'rgba(255, 210, 128,0.75)'
+theme.color.warning.t.lighten2 = 'rgba(255, 210, 128,0.5)'
+theme.color.warning.t.lighten3 = 'rgba(255, 210, 128,0.25)'
+theme.color.warning.t.lighten4 = 'rgba(255, 210, 128,0.20)'
+theme.color.warning.t.lighten5 = 'rgba(255, 210, 128,0.15)'
+theme.color.warning.t.lighten6 = 'rgba(255, 210, 128,0.12)'
+theme.color.warning.t.lighten7 = 'rgba(255, 210, 128,0.10)'
+theme.color.warning.t.lighten8 = 'rgba(255, 210, 128,0.08)'
+theme.color.warning.t.lighten9 = 'rgba(255, 210, 128,0.04)'
+
+// Info default
+theme.color.info = {}
+theme.color.info.default = '#B4B7FF'
+
+// Info transparent
+theme.color.info.t = {}
+theme.color.info.t.lighten1 = 'rgba(180, 183, 255,0.75)'
+theme.color.info.t.lighten2 = 'rgba(180, 183, 255,0.5)'
+theme.color.info.t.lighten3 = 'rgba(180, 183, 255,0.25)'
+theme.color.info.t.lighten4 = 'rgba(180, 183, 255,0.20)'
+theme.color.info.t.lighten5 = 'rgba(180, 183, 255,0.15)'
+theme.color.info.t.lighten6 = 'rgba(180, 183, 255,0.12)'
+theme.color.info.t.lighten7 = 'rgba(180, 183, 255,0.10)'
+theme.color.info.t.lighten8 = 'rgba(180, 183, 255,0.08)'
+theme.color.info.t.lighten9 = 'rgba(180, 183, 255,0.04)'
 
 // Dark pure
 theme.color.dark = {}
@@ -72,15 +111,6 @@ theme.color.dark.t.lighten9 = 'rgba(17,17,17,0.04)'
 // White pure
 theme.color.white = {}
 theme.color.white.default = '#fff'
-// theme.color.white.lighten1 = '#fff'
-// theme.color.white.lighten2 = '#fff'
-// theme.color.white.lighten3 = '#fff'
-// theme.color.white.lighten4 = '#fff'
-// theme.color.white.lighten5 = '#fff'
-// theme.color.white.lighten6 = '#fff'
-// theme.color.white.lighten7 = '#fff'
-// theme.color.white.lighten8 = '#fff'
-// theme.color.white.lighten9 = '#fff'
 
 // White transparent
 theme.color.white.t = {}
