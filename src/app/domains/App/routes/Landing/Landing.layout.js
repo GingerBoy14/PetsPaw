@@ -12,7 +12,7 @@ const Landing = () => {
         borderRadius={theme.borderRadius.lg}
         width="100%"
       />
-      <Img src={pet} alt="Girl and pet" position="absolute" my={-80} />
+      <Img src={pet} alt="Girl and pet" position="absolute" right={0} />
     </>
   )
 }

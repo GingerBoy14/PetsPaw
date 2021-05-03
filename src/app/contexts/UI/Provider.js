@@ -17,10 +17,14 @@ const UIProvider = (props) => {
       <AppWrapper
         background={theme.color.background}
         contentProps={{
-          py: 30
+          py: 30,
+          position: 'sticky'
         }}>
         <Row noGutters height="inherit">
-          <Col display="block">
+          <Col
+            display="block"
+            alignSelf="flex-start"
+            style={{ position: 'sticky', top: 0 }}>
             <Sider />
           </Col>
           <Col>{children}</Col>
