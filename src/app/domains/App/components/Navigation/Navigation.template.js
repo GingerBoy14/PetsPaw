@@ -14,21 +14,21 @@ const NAV_CARD_MAP = [
   {
     route: ROUTE_PATHS.VOTING_ALL,
     color: theme.color.info.default,
-    borderColor: theme.color.info.t.lighten3,
+    bc: theme.color.info.t.lighten3,
     text: 'voting',
     image: vote
   },
   {
     route: ROUTE_PATHS.BREEDS_ALL,
     color: theme.color.success.default,
-    borderColor: theme.color.success.t.lighten3,
+    bc: theme.color.success.t.lighten3,
     text: 'breeds',
     image: pet
   },
   {
     route: ROUTE_PATHS.GALLERY_ALL,
     color: theme.color.warning.default,
-    borderColor: theme.color.warning.t.lighten3,
+    bc: theme.color.warning.t.lighten3,
     text: 'gallery',
     image: search
   }
@@ -64,14 +64,11 @@ const ImageCart = styled(Box)`
   justify-content: center;
   flex: 1;
   background-color: ${({ color }) => color};
-  border: 4px solid ${({ borderColor }) => borderColor};
+  border: 4px solid
+    ${({ bc, active }) => (active ? theme.color.primary.t.lighten4 : bc)};
   border-radius: ${theme.borderRadius.lg};
   background-clip: padding-box;
   width: 140px;
-  &:hover {
-    border-color: ${theme.color.primary.t.lighten3};
-    cursor: pointer;
-  }
 `
 const TextCart = styled(Box)`
   display: flex;
@@ -80,9 +77,6 @@ const TextCart = styled(Box)`
     active ? theme.color.primary.default : theme.color.white.default};
   padding: 10px 0;
   border-radius: ${theme.borderRadius.sm};
-  &:hover {
-    cursor: pointer;
-  }
 `
 
 const NavCard = (props) => {
@@ -96,13 +90,20 @@ const NavCard = (props) => {
   const goToPage = () => {
     history.push(route)
   }
+
+  // [TEMPLATE]
   return (
-    <Box height="100%" display="flex" flexDirection="column" onClick={goToPage}>
-      <ImageCart {...props} mb={10}>
+    <Box
+      className="nav-card"
+      height="100%"
+      display="flex"
+      flexDirection="column"
+      onClick={goToPage}>
+      <ImageCart className="nav-image" {...props} mb={10}>
         <Img src={image} alt={`image-${text}`} />
       </ImageCart>
 
-      <TextCart active={active}>
+      <TextCart active={active} className="nav-text">
         <Text
           color={
             active ? theme.color.white.default : theme.color.primary.default

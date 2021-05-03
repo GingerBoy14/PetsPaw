@@ -148,3 +148,19 @@ select:-webkit-autofill:focus {
 //.ant-upload.ant-upload-select {
 //  display: block;
 //}
+
+
+
+
+.nav-card{
+  cursor:pointer;
+  &:hover>.nav-image{
+    border-color: @white;
+  }
+  &:hover>.nav-text{
+    background-color: rgba(255, 134, 142,0.20);
+    &>*{
+      color:@primary-color
+    }
+  }
+}
