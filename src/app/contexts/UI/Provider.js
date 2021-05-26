@@ -27,7 +27,7 @@ const UIProvider = (props) => {
             style={{ position: 'sticky', top: 0 }}>
             <Sider />
           </Col>
-          <Col>{children}</Col>
+          <Col style={{ flexDirection: 'column' }}>{children}</Col>
         </Row>
       </AppWrapper>
     </UIContext.Provider>

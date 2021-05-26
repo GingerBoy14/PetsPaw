@@ -81,8 +81,8 @@ module.exports = {
 
   // ——— HEIGHT RULES
   '@height-sm': '24px',
-  '@height-base': '48px',
-  '@height-lg': '56px',
+  '@height-base': '40px',
+  '@height-lg': '60px',
 
   // ——— LAYOUT
   '@layout-header-background': '@white',
@@ -201,7 +201,7 @@ module.exports = {
   // @input-color: @text-color;
   // @input-icon-color: @input-color;
   '@input-border-color': 'transparent',
-  '@input-bg': 'fade(@dark, 8%)', //'tint(@dark, 92%)',
+  '@input-bg': '@white', //'tint(@dark, 92%)',
   // @input-number-hover-border-color: @input-hover-border-color;
   // @input-number-handler-active-bg: #f4f4f4;
   '@input-number-handler-hover-bg': '@primary-color',
