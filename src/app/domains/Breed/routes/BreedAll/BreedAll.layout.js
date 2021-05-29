@@ -1,5 +1,7 @@
+import { ContentWrapper } from 'app/components'
+
 const BreedAll = () => {
-  return <>Breed All</>
+  return <ContentWrapper>Breed All</ContentWrapper>
 }
 
 export default BreedAll

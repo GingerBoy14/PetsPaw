@@ -57,6 +57,18 @@ const metadata = {
         type: 'select',
         options: SIZES
       }
+    },
+    block: {
+      defaultValue: false,
+      table: {
+        defaultValue: { summary: false }
+      }
+    },
+    isActive: {
+      defaultValue: false,
+      table: {
+        defaultValue: { summary: false }
+      }
     }
   }
 }
@@ -64,4 +76,4 @@ export default metadata
 
 export const Button = (args) => <CustomButton {...args}>Button</CustomButton>
 
-Button.args = {}
+Button.args = { block: false, isActive: false }

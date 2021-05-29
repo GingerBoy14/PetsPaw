@@ -10,9 +10,16 @@ const Landing = () => {
         ml="72px"
         bg={theme.color.primary.t.lighten4}
         borderRadius={theme.borderRadius.lg}
-        width="100%"
-      />
-      <Img src={pet} alt="Girl and pet" position="absolute" right={0} />
+        height="100%">
+        <Img
+          src={pet}
+          alt="Girl and pet"
+          position="absolute"
+          right={0}
+          top={0}
+          pt={3}
+        />
+      </Box>
     </>
   )
 }

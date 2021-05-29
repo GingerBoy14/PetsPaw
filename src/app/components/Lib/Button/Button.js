@@ -15,10 +15,10 @@ const getSecondaryStyles = (theme) => ({
 })
 
 const Button = styled(AntButton)(
-  {
-    width: 'fit-content',
+  ({ block }) => ({
+    width: !block && 'fit-content',
     textTransform: 'uppercase'
-  },
+  }),
   ({ theme }) =>
     variant({
       prop: 'type',

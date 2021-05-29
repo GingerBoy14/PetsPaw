@@ -51,12 +51,22 @@ const Navigation = (props) => {
     <Row noOuterGutters>
       {NAV_CARD_MAP.map((card) => (
         <Col style={{ alignItems: 'center' }}>
-          <NavCard active={card.route === currentPage} {...card} />
+          <NavItem active={card.route === currentPage} {...card} />
         </Col>
       ))}
     </Row>
   )
 }
+
+const NavCard = styled(Box)`
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  cursor: pointer;
+  &:hover > * {
+    transition: ${theme.transition.default};
+  }
+`
 
 const ImageCart = styled(Box)`
   display: flex;
@@ -69,6 +79,9 @@ const ImageCart = styled(Box)`
   border-radius: ${theme.borderRadius.lg};
   background-clip: padding-box;
   width: 140px;
+  ${NavCard}:hover & {
+    border-color: ${theme.color.white.default};
+  }
 `
 const TextCart = styled(Box)`
   display: flex;
@@ -77,9 +90,15 @@ const TextCart = styled(Box)`
     active ? theme.color.primary.default : theme.color.white.default};
   padding: 10px 0;
   border-radius: ${theme.borderRadius.sm};
+  ${NavCard}:hover & {
+    background-color: ${theme.color.primary.t.lighten4};
+    & > * {
+      color: ${theme.color.primary.default};
+    }
+  }
 `
 
-const NavCard = (props) => {
+const NavItem = (props) => {
   // [INTERFACES]
   const { active, route, text, image } = props
 
@@ -93,17 +112,12 @@ const NavCard = (props) => {
 
   // [TEMPLATE]
   return (
-    <Box
-      className="nav-card"
-      height="100%"
-      display="flex"
-      flexDirection="column"
-      onClick={goToPage}>
-      <ImageCart className="nav-image" {...props} mb={10}>
+    <NavCard onClick={goToPage}>
+      <ImageCart {...props} mb={10}>
         <Img src={image} alt={`image-${text}`} />
       </ImageCart>
 
-      <TextCart active={active} className="nav-text">
+      <TextCart active={active}>
         <Text
           color={
             active ? theme.color.white.default : theme.color.primary.default
@@ -112,10 +126,10 @@ const NavCard = (props) => {
           {text}
         </Text>
       </TextCart>
-    </Box>
+    </NavCard>
   )
 }
-NavCard.propTypes = {
+NavItem.propTypes = {
   active: PropTypes.bool,
   text: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
