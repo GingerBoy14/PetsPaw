@@ -1,7 +1,8 @@
 import React from 'react'
 import CustomButton from './Button'
+import { SearchOutlined } from '@ant-design/icons'
 
-// constants
+// [CONSTANTS]
 const TYPES = [
   'white',
   'primary',
@@ -57,6 +58,18 @@ const metadata = {
         type: 'select',
         options: SIZES
       }
+    },
+    block: {
+      defaultValue: false,
+      table: {
+        defaultValue: { summary: false }
+      }
+    },
+    isActive: {
+      defaultValue: false,
+      table: {
+        defaultValue: { summary: false }
+      }
     }
   }
 }
@@ -64,4 +77,10 @@ export default metadata
 
 export const Button = (args) => <CustomButton {...args}>Button</CustomButton>
 
-Button.args = {}
+Button.args = { block: false, isActive: false }
+
+export const ButtonWithIcon = (args) => (
+  <CustomButton icon={<SearchOutlined />} {...args} />
+)
+
+ButtonWithIcon.args = {}

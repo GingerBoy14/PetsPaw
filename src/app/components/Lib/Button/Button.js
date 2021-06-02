@@ -15,10 +15,9 @@ const getSecondaryStyles = (theme) => ({
 })
 
 const Button = styled(AntButton)(
-  {
-    width: 'fit-content',
+  () => ({
     textTransform: 'uppercase'
-  },
+  }),
   ({ theme }) =>
     variant({
       prop: 'type',
@@ -80,5 +79,6 @@ Button.propTypes = {
   ]),
   hover: PropTypes.oneOf(['primary', 'secondary'])
 }
+Button.defaultProps = { size: 'middle' }
 
 export default Button
