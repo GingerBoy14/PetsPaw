@@ -1,5 +1,8 @@
 const theme = {}
 
+//// SPACE
+theme.space = [0, '4px', '8px', '16px', '32px', '64px']
+
 //// GRID
 theme.breakpoints = ['576px', '768px', '1024px', '1200px', '1600px']
 
@@ -167,9 +170,22 @@ theme.borderRadius.md = '15px'
 theme.borderRadius.sm = '10px'
 theme.borderRadius.xs = '5px'
 
+//// BORDER RADIUS
+theme.borderWidths = {}
+theme.borderWidths.xxl = '6px'
+theme.borderWidths.xl = '5px'
+theme.borderWidths.lg = '4px'
+theme.borderWidths.md = '3px'
+theme.borderWidths.sm = '2px'
+theme.borderWidths.xs = '1px'
+
 //// BORDER
 theme.border = {}
 theme.border.uploadArea = `2px dashed ${theme.color.dark.t.lighten8}`
+
+//// TRANSITION
+theme.transition = {}
+theme.transition.default = 'all 0.3s'
 
 //// TYPOGRAPHY
 theme.typography = {}
