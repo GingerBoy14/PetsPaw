@@ -5,6 +5,8 @@ import { SearchOutlined } from '@ant-design/icons'
 // [CONSTANTS]
 const TYPES = [
   'white',
+  'success',
+  'warning',
   'primary',
   'secondary',
   'text',
@@ -13,7 +15,7 @@ const TYPES = [
   'dashed'
 ]
 const HOVERS = ['primary', 'secondary']
-const SIZES = ['small', 'middle', 'large']
+const SIZES = ['small', 'middle', 'large', 'gigant']
 
 const metadata = {
   title: 'components/Lib/Button',
@@ -70,6 +72,12 @@ const metadata = {
       table: {
         defaultValue: { summary: false }
       }
+    },
+    danger: {
+      defaultValue: false,
+      table: {
+        defaultValue: { summary: false }
+      }
     }
   }
 }
@@ -77,7 +85,7 @@ export default metadata
 
 export const Button = (args) => <CustomButton {...args}>Button</CustomButton>
 
-Button.args = { block: false, isActive: false }
+Button.args = { block: false, isActive: false, danger: false }
 
 export const ButtonWithIcon = (args) => (
   <CustomButton icon={<SearchOutlined />} {...args} />

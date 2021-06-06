@@ -27,6 +27,24 @@ const Button = styled(AntButton)(
           backgroundColor: theme.color.white.default,
           '&:hover': getSecondaryStyles(theme)
         },
+        success: {
+          color: theme.color.white.default,
+          backgroundColor: theme.color.success.default,
+          '&:hover': {
+            color: theme.color.success.default,
+            backgroundColor: theme.color.success.t.lighten3,
+            borderColor: 'transparent'
+          }
+        },
+        warning: {
+          color: theme.color.white.default,
+          backgroundColor: theme.color.warning.default,
+          '&:hover': {
+            color: theme.color.warning.default,
+            backgroundColor: theme.color.warning.t.lighten3,
+            borderColor: 'transparent'
+          }
+        },
         primary: {
           ...getPrimaryStyles(theme),
           '&:hover': getSecondaryStyles(theme)
@@ -59,7 +77,18 @@ const Button = styled(AntButton)(
     variant({
       prop: 'size',
       variants: {
-        middle: { borderRadius: theme.borderRadius.sm }
+        middle: { borderRadius: theme.borderRadius.sm },
+        gigant: {
+          height: 80,
+          '&.ant-btn-icon-only': {
+            width: 80
+          },
+          padding: '11px 0',
+          fontSize: theme.typography.fontSize.h2,
+          '&>*': {
+            fontSize: theme.typography.fontSize.h2
+          }
+        }
       }
     })
 )
@@ -77,7 +106,8 @@ Button.propTypes = {
     'ghost',
     'dashed'
   ]),
-  hover: PropTypes.oneOf(['primary', 'secondary'])
+  hover: PropTypes.oneOf(['primary', 'secondary']),
+  danger: PropTypes.bool
 }
 Button.defaultProps = { size: 'middle' }
 
