@@ -1,5 +1,7 @@
+import { ContentWrapper } from 'app/components'
+
 const Liked = () => {
-  return <>Liked</>
+  return <ContentWrapper title="Likes">Liked</ContentWrapper>
 }
 
 export default Liked

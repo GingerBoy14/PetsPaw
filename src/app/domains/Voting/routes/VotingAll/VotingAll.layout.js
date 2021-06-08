@@ -1,5 +1,7 @@
+import { ContentWrapper } from 'app/components'
+
 const VotingAll = () => {
-  return <>Voting All</>
+  return <ContentWrapper title="Voting">Voting All</ContentWrapper>
 }
 
 export default VotingAll
