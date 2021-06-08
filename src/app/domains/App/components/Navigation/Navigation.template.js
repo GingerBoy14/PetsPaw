@@ -1,8 +1,9 @@
+import { Button } from 'app/components/Lib'
 import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { withRouter, useHistory } from 'react-router-dom'
 import styled from 'styled-components'
-import { Text, Img } from 'antd-styled'
+import { Img } from 'antd-styled'
 import { Row, Col, Box } from '@qonsoll/react-design'
 import { ROUTE_PATHS } from 'app/constants'
 import vote from '~/assets/vote-table.png'
@@ -63,20 +64,13 @@ const ImageCart = styled(Box)`
   align-items: center;
   justify-content: center;
   flex: 1;
+  cursor: pointer;
   background-color: ${({ color }) => color};
   border: 4px solid
     ${({ bc, active }) => (active ? theme.color.primary.t.lighten4 : bc)};
   border-radius: ${theme.borderRadius.lg};
   background-clip: padding-box;
   width: 140px;
-`
-const TextCart = styled(Box)`
-  display: flex;
-  justify-content: center;
-  background-color: ${({ active }) =>
-    active ? theme.color.primary.default : theme.color.white.default};
-  padding: 10px 0;
-  border-radius: ${theme.borderRadius.sm};
 `
 
 const NavCard = (props) => {
@@ -103,15 +97,15 @@ const NavCard = (props) => {
         <Img src={image} alt={`image-${text}`} />
       </ImageCart>
 
-      <TextCart active={active} className="nav-text">
-        <Text
-          color={
-            active ? theme.color.white.default : theme.color.primary.default
-          }
-          textTransform="uppercase">
-          {text}
-        </Text>
-      </TextCart>
+      <Button
+        type="white"
+        isActive={active}
+        fontSize="15px"
+        fontWeight={theme.typography.fontWeight.regular}
+        // need to prevent focus
+        onMouseDown={(e) => e.preventDefault()}>
+        {text}
+      </Button>
     </Box>
   )
 }
